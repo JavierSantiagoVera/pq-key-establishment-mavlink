@@ -1,5 +1,7 @@
 # Post-Quantum Key Establishment for MAVLink
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22950489.svg)](https://doi.org/10.5281/zenodo.22950489)
+
 Code, firmware fork, and experiment artifacts for a MAVLink-native post-quantum
 key-establishment extension: an HQC key-encapsulation mechanism (KEM) combined with a
 KEMTLS pre-distributed-key (KEMTLS-PDK) handshake between a Ground Control Station (GCS)
@@ -55,5 +57,6 @@ file in that directory) and is included unmodified.
 
 ## Citation
 
+Archived on Zenodo: [10.5281/zenodo.22950489](https://doi.org/10.5281/zenodo.22950489).
 See `CITATION.cff`. If you use this code, please cite the associated manuscript once
-published; in the meantime, cite this repository directly.
+published; in the meantime, cite this repository (or the Zenodo record) directly.

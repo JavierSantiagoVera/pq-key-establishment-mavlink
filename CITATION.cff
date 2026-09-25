@@ -15,5 +15,8 @@ authors:
     given-names: Nicolas
     affiliation: "Universidad de los Andes"
 repository-code: "https://github.com/JavierSantiagoVera/pq-key-establishment-mavlink"
+doi: 10.5281/zenodo.22950489
+version: v1.0.1
+date-released: "2026-09-25"
 license: GPL-3.0
 type: software
