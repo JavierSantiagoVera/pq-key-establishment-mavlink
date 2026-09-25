@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Post-Quantum Key Establishment for MAVLink: HQC and KEMTLS-PDK"
+authors:
+  - family-names: Casadiego
+    given-names: "Carlos David"
+    affiliation: "Universidad de los Andes"
+  - family-names: Vera
+    given-names: Javier
+    affiliation: "Universidad de los Andes"
+  - family-names: Gauthier-Umaña
+    given-names: Valérie
+    affiliation: "Universidad de los Andes"
+  - family-names: Segura
+    given-names: Nicolas
+    affiliation: "Universidad de los Andes"
+repository-code: "https://github.com/JavierSantiagoVera/pq-key-establishment-mavlink"
+license: GPL-3.0
+type: software

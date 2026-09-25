@@ -1,0 +1,17 @@
+# Se desactiva el Task Watchdog Timer para este banco de pruebas de un solo tiro.
+# Motivo (2026-09-22): el bucle de 500 encapsulaciones de HQC-128 corre sin ceder el
+# CPU (a diferencia del codigo real de vuelo, que si cede via el planificador
+# cooperativo -- ver ../sitl_realtime/README.md), y en esta placa concreta (crystal de
+# 41.01 MHz detectado por esptool, fuera del 40 MHz nominal -- posible clon) el chequeo
+# de idle-task del TWDT crashea con LoadProhibited antes de que el benchmark llegue a
+# imprimir nada util. Desactivar el TWDT no afecta la medicion en si (se mide con
+# esp_timer_get_time(), no depende del watchdog) -- es una herramienta de diagnostico de
+# tareas colgadas que no aporta nada a un binario de un solo experimento sin OTA ni
+# multitarea real.
+CONFIG_ESP_TASK_WDT_INIT=n
+
+# El stack por defecto de la tarea principal (3584 B) es insuficiente para los buffers
+# internos de HQC-128 (matrices/FFT de la implementacion de referencia PQClean) -- causaba
+# un "Double exception" (excepcion doble, stack corrompido) al entrar a
+# crypto_kem_keypair(). Se sube a 32 KiB, generoso frente a los ~167 KiB de DRAM libre.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768
